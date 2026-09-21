@@ -16,7 +16,7 @@ Usei Express com queries SQL diretas, sem ORM, porque a API é pequena e as cons
 Pré-requisito: Docker e Docker Compose instalados.
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/gabrielsdev6/iventario-informatica.git
 cd iventario-ti
 docker-compose up -d
 ```
