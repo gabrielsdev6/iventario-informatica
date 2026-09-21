@@ -17,7 +17,7 @@ Pré-requisito: Docker e Docker Compose instalados.
 
 ```bash
 git clone https://github.com/gabrielsdev6/iventario-informatica.git
-cd iventario-ti
+cd iventario-informatica
 docker-compose up -d
 ```
 
