@@ -9,7 +9,7 @@ Mini-dashboard para controlar equipamentos de TI (notebooks, periféricos, equip
 - Frontend: HTML e JavaScript puro, com Tailwind CSS via CDN
 - Containerização: Docker e Docker Compose
 
-Usei Express com queries SQL diretas, sem ORM, porque a API é pequena e as consultas ficam mais explícitas assim. No frontend, escolhi JS puro em vez de um framework: é uma tela única, e um build só adicionaria complexidade.
+Usei Express com queries SQL diretas, sem ORM, porque a API é pequena. No frontend, escolhi JS puro.
 
 ## Como rodar
 
