@@ -1,4 +1,3 @@
-// URL base da API
 const API_URL = '/api/equipamentos';
 
 const tableBody = document.getElementById('equipamentos-table-body');

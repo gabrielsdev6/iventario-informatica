@@ -9,19 +9,16 @@ exports.listar = async (req, res) => {
     let query = 'SELECT * FROM equipamentos WHERE 1=1';
     const params = [];
 
-    // Filtro por texto (Nome do equipamento)
     if (search) {
       params.push(`%${search}%`);
       query += ` AND nome ILIKE $${params.length}`;
     }
 
-    // Filtro por categoria
     if (categoria) {
       params.push(categoria);
       query += ` AND categoria = $${params.length}`;
     }
 
-    // Filtro por status
     if (status) {
       params.push(status);
       query += ` AND status = $${params.length}`;
@@ -41,7 +38,6 @@ exports.criar = async (req, res) => {
   try {
     const { nome, quantidade, categoria, status } = req.body;
 
-    // Validações obrigatórias
     if (!nome || !categoria || !status || quantidade === undefined || quantidade === null) {
       return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
     }
@@ -71,7 +67,7 @@ exports.criar = async (req, res) => {
   }
 };
 
-// 3. EDITAR EQUIPAMENTO (Update - BÔNUS)
+
 exports.atualizar = async (req, res) => {
   try {
     const { id } = req.params;
@@ -110,7 +106,6 @@ exports.atualizar = async (req, res) => {
   }
 };
 
-// 4. EXCLUIR EQUIPAMENTO (Delete - BÔNUS)
 exports.excluir = async (req, res) => {
   try {
     const { id } = req.params;
